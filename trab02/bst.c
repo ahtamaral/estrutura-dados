@@ -1,14 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Structure to represent a node in the binary search tree
 struct Node {
     int value;
     struct Node* left;
     struct Node* right;
 };
 
-// Function to create a new node
 struct Node* createNode(int value) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->value = value;
@@ -17,7 +15,6 @@ struct Node* createNode(int value) {
     return newNode;
 }
 
-// Function to insert a value into the binary search tree
 struct Node* insert(struct Node* root, int value) {
     if (root == NULL) {
         return createNode(value);
@@ -30,13 +27,12 @@ struct Node* insert(struct Node* root, int value) {
     return root;
 }
 
-// Function to perform a level-order traversal of the binary search tree
-void levelOrderTraversal(struct Node* root) {
+void traversal(struct Node* root) {
     if (root == NULL) {
         return;
     }
 
-    struct Node* queue[1000]; // Assuming a maximum of 1000 nodes
+    struct Node* queue[1000];
     int front = 0, rear = 0;
 
     queue[rear++] = root;
@@ -72,7 +68,7 @@ int main() {
         } else if (input == 'q') {
             break;
         } else {
-            // printf("Entrada inválida. Insira 'i', 'p', ou 'q'.\n");
+            // printf("Entrada inválida.\n");
         }
     }
 
