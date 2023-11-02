@@ -1,0 +1,2 @@
+Out de in1 é 22.
+Out de in2 é 10.
