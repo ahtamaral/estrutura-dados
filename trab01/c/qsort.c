@@ -62,9 +62,8 @@ int main() {
 
     quickSort(arr, 0, size - 1);
 
-    for (int i = 0; i < size-1; i++) 
+    for (int i = 0; i < size; i++)
         printf("%d\n", arr[i]);
-    printf("%d", arr[size-1]);
 
     free(arr);
 

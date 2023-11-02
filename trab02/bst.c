@@ -49,6 +49,7 @@ void traversal(struct Node* root) {
             queue[rear++] = current->right;
         }
     }
+    printf("\n");
 }
 
 int main() {
@@ -56,18 +57,15 @@ int main() {
     char input;
     int value = 0;
 
-    while (1) {
-        scanf(" %c", &input);
+    while (scanf("%c", &input) != EOF) {
 
         if (input == 'i') {
             scanf("%d", &value);
             root = insert(root, value);
         } else if (input == 'p') {
-            levelOrderTraversal(root);
-            break;
-        } else if (input == 'q') {
-            break;
-        } else {
+            traversal(root);
+        }
+        else {
             // printf("Entrada inválida.\n");
         }
     }
