@@ -70,9 +70,7 @@ int kruskalMstWeight(Edge *elist, int numEdges)
 
 int main() 
 {
-
-    int numVertices, numEdges;
-    int *edges = NULL;
+    int numVertices;
     int nInputs = 0;
     int MstWeight;
 
@@ -94,7 +92,6 @@ int main()
     {
         nInputs++;
         elist = (Edge*) realloc(elist, nInputs * sizeof(Edge) );
-        /*Printf aresta*/
         elist[nInputs-1] = e;
     }
 
